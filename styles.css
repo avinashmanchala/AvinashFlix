@@ -298,5 +298,71 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
+  /* Responsive Enhancements */
+@media (max-width: 768px) {
+    .hero {
+      height: 60vh;
+      padding-left: 2rem;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .hero-content {
+      max-width: 100%;
+    }
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .hero-badge {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.8rem;
+    }
+  
+    .row {
+      flex-direction: row;
+      overflow-x: scroll;
+    }
+  
+    .card {
+      width: 240px;
+      height: 135px;
+      flex-shrink: 0;
+    }
+  
+    .preview-content {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .preview-content img {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    .preview-text h3 {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  
+    .preview-text p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .close-btn {
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.8rem;
+    }
+  }
   
   
