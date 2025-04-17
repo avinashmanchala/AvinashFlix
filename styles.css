@@ -129,21 +129,43 @@
     background: #888;
     border-radius: 10px;
   }
-  
-  /* Cards */
   .card {
-    height: 180px;
-    width: 320px;
+    position: relative;
+    height: 200px;
+    width: 360px;
     border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
     object-fit: cover;
-    cursor: pointer;
+    background-color: #000;
+    padding: 12px; /* Add padding */
   }
+  .overlay-top {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+    
   
-  .card:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  
+  .row {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: stretch; /* Ensures same height across thumbnails */
   }
+  .card:hover {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+      
   
   /* Booting Screen */
   #boot-screen {

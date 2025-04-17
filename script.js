@@ -14,41 +14,58 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Card data
 const previews = {
-  "Education": {
-    title: "Mining Education",
-    description: "Completed Diploma & B.Tech in Mining with strong academic performance and field exposure.",
-    bg: "assets/bg-mining.jpg",
+    "Diploma in Mining": {
+  title: "Diploma in Mining",
+  description: "Completed Diploma at Govt Polytechnic College (2015–2018) with 85.5%. Gained strong fundamentals in mining and field techniques.",
+  image: "assets/faces/diploma_photo.png"
+},
+"B.Tech in Mining": {
+  title: "B.Tech in Mining",
+  description: "Graduated from Aditya Engineering College (2018–2021) with 8.65 GPA. Worked on real-time models like Bucket Wheel Excavator.",
+  image: "assets/faces/btech_photo.png"
+},
+"Master's in CS": {
+  title: "Master’s in Computer Science",
+  description: "Pursuing MS at Pace University (2023–2025). Focusing on AI/ML, Full Stack Development, and academic research projects.",
+  image: "assets/faces/masters_photo.png"
+},
+
+  
+  "TCS Experience": {
+    title: "Assistant Systems Engineer at TCS",
+    description: "Built Java-based backend systems, improved uptime to 99.9%, and created 4 Power Apps.",
     image: "assets/faces/mining.png"
   },
-  "TCS Experience": {
-    title: "TCS Engineer",
-    description: "Built Java-based backend systems, improved uptime to 99.9%, and created 4 Power Apps.",
-    bg: "assets/bg-tcs.jpg",
-    image: "assets/faces/tcs.jpg"
-  },
+  "HP Simulation": {
+  title: "Hewlett Packard Simulation",
+  description: "Completed HP Enterprise virtual internship simulating enterprise tech solutions, improving client infrastructure and automation.",
+  bg: "assets/bg-hp.jpg"
+},
+"Accenture Simulation": {
+  title: "Accenture Simulation",
+  description: "Worked on a virtual client case study to deliver innovative technology consulting solutions and data-driven business insights.",
+  bg: "assets/bg-accenture.jpg"
+},
+  
   "Pace University": {
     title: "Master’s in CS",
     description: "Explored AI/ML, Full Stack Development, and academic research at Pace University.",
-    bg: "assets/bg-pace.jpg",
-    image: "assets/faces/pace.jpg"
+    image: "assets/faces/mining.png"
   },
   "USPARK": {
     title: "USPARK – AI Medical Assistant",
     description: "AI-powered healthcare platform for image segmentation and real-time diagnostics.",
-    bg: "assets/bg-uspark.jpg",
-    image: "assets/faces/uspark.jpg"
+    image: "assets/faces/mining.png"
   },
   "SEW SMART": {
     title: "SEW SMART",
     description: "An eco-conscious fashion app that promotes sustainable trends and designer connections.",
-    bg: "assets/bg-sewsmart.jpg",
-    image: "assets/faces/sewsmart.jpg"
+    image: "assets/faces/mining.png"
   },
   "Meal Planner": {
     title: "Meal Planner",
     description: "Built a meal planning and nutrition tracking platform using React and MongoDB.",
-    bg: "assets/bg-mealplanner.jpg",
-    image: "assets/faces/mealplanner.jpg"
+    image: "assets/faces/mining.png"
   }
 };
 
