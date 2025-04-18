@@ -364,3 +364,97 @@
     }
   }
   
+  /* Mastering Code - Skill Categories */
+.skills-section {
+    padding: 2rem;
+  }
+  
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  /* Skill Categories */
+  .skill-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  /* Each Category Block */
+  .skill-category {
+    flex: 1 1 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.15);
+  }
+  
+  /* Skill Group Title */
+  .skill-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e50914;
+    text-align: center;
+  }
+  
+  /* Floating Icons */
+  .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-icons img,
+  .skill-icons .text-skill {
+    width: 50px;
+    height: 50px;
+    animation: floatBounce 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    cursor: default;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.1));
+  }
+  
+  .skill-icons img:hover,
+  .skill-icons .text-skill:hover {
+    transform: scale(1.15);
+  }
+  
+  .text-skill {
+    width: auto;
+    padding: 0.5rem 0.75rem;
+    background: #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Floating Bounce Animation */
+  @keyframes floatBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .skill-category {
+      flex: 1 1 100%;
+    }
+  
+    .skill-icons img,
+    .skill-icons .text-skill {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  

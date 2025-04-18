@@ -32,19 +32,19 @@ const previews = {
 
   
   "TCS Experience": {
-    title: "Assistant Systems Engineer at TCS",
+    title: "Junior Java Developer",
     description: "Built Java-based backend systems, improved uptime to 99.9%, and created 4 Power Apps.",
-    image: "assets/faces/mining.png"
+    image: "assets/faces/tcs_photo.png"
   },
   "HP Simulation": {
   title: "Hewlett Packard Simulation",
   description: "Completed HP Enterprise virtual internship simulating enterprise tech solutions, improving client infrastructure and automation.",
-  bg: "assets/bg-hp.jpg"
+  image: "assets/faces/hpe_photo.png"
 },
 "Accenture Simulation": {
   title: "Accenture Simulation",
   description: "Worked on a virtual client case study to deliver innovative technology consulting solutions and data-driven business insights.",
-  bg: "assets/bg-accenture.jpg"
+  image: "assets/faces/accenture_photo.png"
 },
   
   "Pace University": {
