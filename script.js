@@ -66,8 +66,100 @@ const previews = {
     title: "Meal Planner",
     description: "Built a meal planning and nutrition tracking platform using React and MongoDB.",
     image: "assets/faces/mining.png"
-  }
+  },
+
+  "Programming Languages": {
+  title: "Programming Languages",
+  description: "",
+  image: "assets/skills/programming.svg",
+  icons: ["devicon-java-plain", "icon-placeholder:SQL", "icon-placeholder:C"]
+},
+"Web Technologies": {
+  title: "Web Technologies",
+  description: "",
+  image: "assets/skills/webtech.svg",
+  icons: ["devicon-javascript-plain", "devicon-html5-plain", "devicon-css3-plain", "devicon-react-original", "devicon-nodejs-plain", "icon-placeholder:Express.js"]
+},
+"Databases": {
+  title: "Databases",
+  description: "",
+  image: "assets/skills/database.svg",
+  icons: ["icon-placeholder:MySQL", "icon-placeholder:MongoDB", "icon-placeholder:PostgreSQL"]
+},
+"Open Source Software": {
+  title: "Open Source Software",
+  description: "",
+  image: "assets/skills/opensource.svg",
+  icons: ["icon-placeholder:Spring Boot", "icon-placeholder:Hibernate", "icon-placeholder:JDBC"]
+},
+"Dev & Management Tools": {
+  title: "Dev & Management Tools",
+  description: "",
+  image: "assets/skills/devtools.svg",
+  icons: ["devicon-vscode-plain", "devicon-git-plain", "icon-placeholder:Postman", "icon-placeholder:Oracle VM", "icon-placeholder:Eclipse", "devicon-figma-plain", "icon-placeholder:Agile", "icon-placeholder:SDLC", "icon-placeholder:OOP", "devicon-jira-plain", "devicon-jenkins-plain"]
+},
+"Cloud Platforms": {
+  title: "Cloud Platforms",
+  description: "",
+  image: "assets/skills/cloud.svg",
+  icons: ["icon-placeholder:Digital Ocean", "devicon-googlecloud-plain", "devicon-amazonwebservices-plain"]
+},
+"Certifications": {
+  title: "Certifications",
+  description: "",
+  image: "assets/skills/certifications.svg",
+  icons: ["icon-placeholder:Accenture", "icon-placeholder:HPE"]
+}
+
+  
 };
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const alt = card.alt;
+      const data = previews[alt];
+      if (data) {
+        previewTitle.textContent = data.title;
+        previewDescription.textContent = data.description;
+        previewImage.src = data.image;
+        overlay.style.backgroundImage = data.bg ? `url('${data.bg}')` : "none";
+  
+        // Clear old icons if any
+        const iconContainer = document.getElementById("preview-icons");
+        if (iconContainer) iconContainer.remove();
+  
+        if (data.icons) {
+          const iconDiv = document.createElement("div");
+          iconDiv.id = "preview-icons";
+          iconDiv.style.marginTop = "1.2rem";
+          iconDiv.style.display = "flex";
+          iconDiv.style.flexWrap = "wrap";
+          iconDiv.style.gap = "1rem";
+  
+          data.icons.forEach(iconClass => {
+            const iconEl = iconClass.startsWith("devicon-")
+              ? Object.assign(document.createElement("i"), {
+                  className: iconClass,
+                  style: "font-size: 2rem;",
+                  title: iconClass.split("-")[1]
+                })
+              : Object.assign(document.createElement("span"), {
+                  className: "icon-placeholder",
+                  textContent: iconClass.split(":")[1],
+                  style: "font-size: 0.9rem; padding: 0.4rem 0.6rem; background: #e50914; border-radius: 4px;"
+                });
+  
+            iconDiv.appendChild(iconEl);
+          });
+  
+          document.querySelector(".preview-text").appendChild(iconDiv);
+        }
+  
+        overlay.classList.remove("hidden");
+      }
+    });
+  });
+  
 
 // Show overlay on card click
 cards.forEach(card => {
